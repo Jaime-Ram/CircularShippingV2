@@ -3,11 +3,17 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import dynamic from 'next/dynamic'
 import 'leaflet/dist/leaflet.css'
-import L from 'leaflet'
+import type * as Leaflet from 'leaflet'
+
+let LeafletModule: typeof Leaflet | null = null
+if (typeof window !== 'undefined') {
+  LeafletModule = require('leaflet')
+}
 
 // Create modern custom marker icon
 const createModernMarkerIcon = (color: string = '#09BC8A') => {
-  return L.divIcon({
+  if (!LeafletModule) return undefined
+  return LeafletModule.divIcon({
     className: 'custom-marker',
     html: `
       <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
