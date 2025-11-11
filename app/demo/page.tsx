@@ -404,7 +404,7 @@ export default function DemoPage() {
   )
 
   // Calculate center of map based on visible points
-  const mapCenter = useMemo(() => {
+  const mapCenter = useMemo<[number, number]>(() => {
     const pointsWithCoords = filteredPackagePoints.filter(p => p.lat && p.lng)
     if (pointsWithCoords.length === 0) return [52.1326, 5.2913] // Center of Netherlands
     
@@ -502,7 +502,7 @@ export default function DemoPage() {
                 {typeof window !== 'undefined' && (
                   <MapContainer
                     center={selectedPoint && selectedPoint.lat && selectedPoint.lng 
-                      ? [selectedPoint.lat, selectedPoint.lng] 
+                      ? [selectedPoint.lat, selectedPoint.lng] as [number, number]
                       : mapCenter}
                     zoom={selectedPoint && selectedPoint.lat && selectedPoint.lng ? 15 : 8}
                     style={{ height: '100%', width: '100%', zIndex: 1 }}
