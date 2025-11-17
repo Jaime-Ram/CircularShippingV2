@@ -93,45 +93,54 @@ export default function Business() {
 
             <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
               {/* Verzendzak Column */}
-              <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-gray-200">
-                <div className="bg-circular-green rounded-2xl px-6 py-3 mb-6">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200">
+                <div className="bg-circular-green rounded-2xl px-6 py-3 mb-5">
                   <h3 className="text-xl sm:text-2xl font-medium text-white">Onze verzendzak</h3>
                 </div>
 
-                {/* Key Stats */}
-                <div className="mb-6 grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-gray-50 rounded-xl">
-                    <div className="text-2xl sm:text-3xl font-medium text-circular-green mb-1">90%</div>
-                    <div className="text-xs sm:text-sm text-gray-600">CO₂ besparing</div>
+                {/* Features */}
+                <div className="mb-6 space-y-2.5 text-sm text-gray-700">
+                  <div className="flex items-start gap-2.5">
+                    <svg className="shrink-0 size-4 text-circular-green mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Bespaart 90% CO₂ ten opzichte van karton</span>
                   </div>
-                  <div className="text-center p-4 bg-gray-50 rounded-xl">
-                    <div className="text-2xl sm:text-3xl font-medium text-circular-green mb-1">80x</div>
-                    <div className="text-xs sm:text-sm text-gray-600">Herbruikbaar</div>
+                  <div className="flex items-start gap-2.5">
+                    <svg className="shrink-0 size-4 text-circular-green mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Kan gemiddeld 80 keer worden hergebruikt</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <svg className="shrink-0 size-4 text-circular-green mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Eenvoudig en snel in te pakken</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <svg className="shrink-0 size-4 text-circular-green mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Biedt meer bescherming</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <svg className="shrink-0 size-4 text-circular-green mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Gemaakt van geupcyclede PP Big Bags</span>
                   </div>
                 </div>
 
-                {/* Pricing Cards */}
-                <div className="mb-6 space-y-3">
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
-                    <div>
-                      <div className="font-medium text-gray-900">M</div>
-                      <div className="text-xs text-gray-600">50 x 30 x 12 cm</div>
+                {/* Pricing */}
+                <div className="mb-6 space-y-2.5">
+                  <div className="flex items-center justify-between py-2.5 border-b border-gray-200">
+                    <div className="text-sm text-gray-700">
+                      <span className="font-medium">M</span> (50 x 30 x 12 cm)
                     </div>
-                    <div className="text-lg font-medium text-circular-dark-green">€1,69</div>
+                    <div className="text-base font-medium text-circular-dark-green">€1,69</div>
                   </div>
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
-                    <div>
-                      <div className="font-medium text-gray-900">L</div>
-                      <div className="text-xs text-gray-600">60 x 35 x 15 cm</div>
+                  <div className="flex items-center justify-between py-2.5 border-b border-gray-200">
+                    <div className="text-sm text-gray-700">
+                      <span className="font-medium">L</span> (60 x 35 x 15 cm)
                     </div>
-                    <div className="text-lg font-medium text-circular-dark-green">€1,79</div>
+                    <div className="text-base font-medium text-circular-dark-green">€1,79</div>
                   </div>
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
-                    <div>
-                      <div className="font-medium text-gray-900">XL</div>
-                      <div className="text-xs text-gray-600">100 x 50 x 30 cm</div>
+                  <div className="flex items-center justify-between py-2.5">
+                    <div className="text-sm text-gray-700">
+                      <span className="font-medium">XL</span> (100 x 50 x 30 cm)
                     </div>
-                    <div className="text-lg font-medium text-circular-dark-green">€1,99</div>
+                    <div className="text-base font-medium text-circular-dark-green">€1,99</div>
                   </div>
                 </div>
 
@@ -141,45 +150,50 @@ export default function Business() {
               </div>
 
               {/* Verzenddoos Column */}
-              <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-gray-200">
-                <div className="bg-circular-green rounded-2xl px-6 py-3 mb-6">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200">
+                <div className="bg-circular-green rounded-2xl px-6 py-3 mb-5">
                   <h3 className="text-xl sm:text-2xl font-medium text-white">Onze verzenddoos</h3>
                 </div>
 
-                {/* Key Stats */}
-                <div className="mb-6 grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-gray-50 rounded-xl">
-                    <div className="text-2xl sm:text-3xl font-medium text-circular-green mb-1">80%</div>
-                    <div className="text-xs sm:text-sm text-gray-600">CO₂ besparing</div>
+                {/* Features */}
+                <div className="mb-6 space-y-2.5 text-sm text-gray-700">
+                  <div className="flex items-start gap-2.5">
+                    <svg className="shrink-0 size-4 text-circular-green mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Bespaart 80% CO₂ ten opzichte van karton</span>
                   </div>
-                  <div className="text-center p-4 bg-gray-50 rounded-xl">
-                    <div className="text-2xl sm:text-3xl font-medium text-circular-green mb-1">20x</div>
-                    <div className="text-xs sm:text-sm text-gray-600">Herbruikbaar</div>
+                  <div className="flex items-start gap-2.5">
+                    <svg className="shrink-0 size-4 text-circular-green mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Kan gemiddeld 20 keer worden hergebruikt</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <svg className="shrink-0 size-4 text-circular-green mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Is gemakkelijk en sneller te verpakken dan karton</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <svg className="shrink-0 size-4 text-circular-green mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Gemaakt van gerecycled PP</span>
                   </div>
                 </div>
 
-                {/* Pricing Cards */}
-                <div className="mb-6 space-y-3">
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
-                    <div>
-                      <div className="font-medium text-gray-900">M</div>
-                      <div className="text-xs text-gray-600">20 x 10 x 10 cm</div>
+                {/* Pricing */}
+                <div className="mb-6 space-y-2.5">
+                  <div className="flex items-center justify-between py-2.5 border-b border-gray-200">
+                    <div className="text-sm text-gray-700">
+                      <span className="font-medium">M</span> (20 x 10 x 10 cm)
                     </div>
-                    <div className="text-lg font-medium text-circular-dark-green">€2,29</div>
+                    <div className="text-base font-medium text-circular-dark-green">€2,29</div>
                   </div>
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
-                    <div>
-                      <div className="font-medium text-gray-900">L</div>
-                      <div className="text-xs text-gray-600">30 x 20 x 11 cm</div>
+                  <div className="flex items-center justify-between py-2.5 border-b border-gray-200">
+                    <div className="text-sm text-gray-700">
+                      <span className="font-medium">L</span> (30 x 20 x 11 cm)
                     </div>
-                    <div className="text-lg font-medium text-circular-dark-green">€2,49</div>
+                    <div className="text-base font-medium text-circular-dark-green">€2,49</div>
                   </div>
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
-                    <div>
-                      <div className="font-medium text-gray-900">XL</div>
-                      <div className="text-xs text-gray-600">60 x 40 x 40 cm</div>
+                  <div className="flex items-center justify-between py-2.5">
+                    <div className="text-sm text-gray-700">
+                      <span className="font-medium">XL</span> (60 x 40 x 40 cm)
                     </div>
-                    <div className="text-lg font-medium text-circular-dark-green">€3,29</div>
+                    <div className="text-base font-medium text-circular-dark-green">€3,29</div>
                   </div>
                 </div>
 
