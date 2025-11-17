@@ -109,7 +109,7 @@ export default function Home() {
                 <svg className="shrink-0 size-5 sm:size-6 mt-1 text-gray-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 <div className="grow">
                   <h3 className="text-sm sm:text-base font-medium text-circular-blue">Hoe kan ik helpen?</h3>
-                  <p className="mt-1 text-xs sm:text-sm text-gray-600">Leuk dat je fan bent van ons product! Je helpt enorm door ons te introduceren bij je favoriete webshops. Laat ons weten wie we moeten benaderen, dan nemen wij het contact over.</p>
+                  <p className="mt-1 text-xs sm:text-sm text-gray-600">Leuk dat je ons wil helpen! Je helpt enorm door ons te introduceren bij je favoriete webshops. Laat ons weten wie we moeten benaderen, dan nemen wij het contact over.</p>
                   <a className="mt-2 inline-flex items-center gap-x-2 text-xs sm:text-sm font-medium text-circular-teal hover:text-circular-blue focus:outline-hidden focus:text-circular-blue" href="#contact">
                     Ik wil helpen!
                     <svg className="shrink-0 size-2 sm:size-2.5 transition ease-in-out group-hover:translate-x-1 group-focus:translate-x-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
