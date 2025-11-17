@@ -282,18 +282,24 @@ export default function DemoPage() {
   const [geocodedPoints, setGeocodedPoints] = useState<Map<number, { lat: number; lng: number }>>(new Map())
   const geocodingInProgress = useRef(false)
 
-  const updateGeocodedPoints = (id: number, coords: { lat: number; lng: number }) => {
+  const updateGeocodedPointsBatch = (updates: Map<number, { lat: number; lng: number }>) => {
     setGeocodedPoints(prev => {
-      if (prev.has(id)) return prev
       const next = new Map(prev)
-      next.set(id, coords)
+      let hasUpdates = false
+      
+      updates.forEach((coords, id) => {
+        if (!next.has(id)) {
+          next.set(id, coords)
+          hasUpdates = true
+        }
+      })
 
-      if (typeof window !== 'undefined') {
+      if (hasUpdates && typeof window !== 'undefined') {
         const serialized = Object.fromEntries(next)
         window.localStorage.setItem('packagePointsGeocoded', JSON.stringify(serialized))
       }
 
-      return next
+      return hasUpdates ? next : prev
     })
   }
 
@@ -357,6 +363,8 @@ export default function DemoPage() {
     geocodingInProgress.current = true
 
     const geocodeBatch = async (batch: { point: typeof PACKAGE_POINTS_DATA[number]; id: number }[]) => {
+      const batchUpdates = new Map<number, { lat: number; lng: number }>()
+      
       await Promise.all(batch.map(async ({ point, id }) => {
         try {
           const response = await fetch(
@@ -372,7 +380,7 @@ export default function DemoPage() {
 
           const data = await response.json()
           if (Array.isArray(data) && data.length > 0) {
-            updateGeocodedPoints(id, {
+            batchUpdates.set(id, {
               lat: parseFloat(data[0].lat),
               lng: parseFloat(data[0].lon)
             })
@@ -381,6 +389,11 @@ export default function DemoPage() {
           console.error(`Geocoding failed for ${point.name}:`, error)
         }
       }))
+      
+      // Update all points in the batch at once
+      if (batchUpdates.size > 0) {
+        updateGeocodedPointsBatch(batchUpdates)
+      }
     }
 
     const runGeocoding = async () => {
@@ -409,16 +422,20 @@ export default function DemoPage() {
     point.city.toLowerCase().includes(searchQuery.toLowerCase())
   )
 
+  // Memoize markers to prevent unnecessary re-renders
+  const markersWithCoords = useMemo(() => {
+    return filteredPackagePoints.filter(point => point.lat && point.lng)
+  }, [filteredPackagePoints])
+
   // Calculate center of map based on visible points
   const mapCenter = useMemo<[number, number]>(() => {
-    const pointsWithCoords = filteredPackagePoints.filter(p => p.lat && p.lng)
-    if (pointsWithCoords.length === 0) return [52.1326, 5.2913] // Center of Netherlands
+    if (markersWithCoords.length === 0) return [52.1326, 5.2913] // Center of Netherlands
     
-    const avgLat = pointsWithCoords.reduce((sum, p) => sum + (p.lat || 0), 0) / pointsWithCoords.length
-    const avgLng = pointsWithCoords.reduce((sum, p) => sum + (p.lng || 0), 0) / pointsWithCoords.length
+    const avgLat = markersWithCoords.reduce((sum, p) => sum + (p.lat || 0), 0) / markersWithCoords.length
+    const avgLng = markersWithCoords.reduce((sum, p) => sum + (p.lng || 0), 0) / markersWithCoords.length
     
     return [avgLat, avgLng] as [number, number]
-  }, [filteredPackagePoints])
+  }, [markersWithCoords])
 
   return (
     <div className="pt-20 md:pt-24">
@@ -519,9 +536,7 @@ export default function DemoPage() {
                       url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
                       subdomains="abcd"
                     />
-                    {filteredPackagePoints
-                      .filter(point => point.lat && point.lng)
-                      .map((point) => (
+                    {markersWithCoords.map((point) => (
                         <Marker
                           key={point.id}
                           position={[point.lat!, point.lng!]}
