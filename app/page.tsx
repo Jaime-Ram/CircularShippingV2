@@ -73,7 +73,7 @@ export default function Home() {
         {/* End Title */}
 
         {/* Facts Block */}
-        <div className="max-w-4xl mx-auto mb-8 sm:mb-10 lg:mb-12">
+        <div className="max-w-5xl mx-auto mb-8 sm:mb-10 lg:mb-12">
           <div className="bg-gradient-to-br from-circular-dark-green to-circular-green rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 text-white">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               <div className="text-center md:text-left">
