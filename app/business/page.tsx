@@ -93,7 +93,7 @@ export default function Business() {
 
             <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
               {/* Verzendzak Column */}
-              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 flex flex-col">
                 <div className="bg-circular-green rounded-2xl px-6 py-3 mb-5">
                   <h3 className="text-xl sm:text-2xl font-medium text-white">Onze verzendzak</h3>
                 </div>
@@ -123,7 +123,7 @@ export default function Business() {
                 </div>
 
                 {/* Pricing */}
-                <div className="mb-6 space-y-2.5">
+                <div className="mb-6 space-y-2.5 flex-1">
                   <div className="flex items-center justify-between py-2.5 border-b border-gray-200">
                     <div className="text-sm text-gray-700">
                       <span className="font-medium">M</span> (50 x 30 x 12 cm)
@@ -144,13 +144,13 @@ export default function Business() {
                   </div>
                 </div>
 
-                <a href="#contact" className="inline-flex justify-center items-center w-full py-3 px-6 text-base font-medium text-white bg-circular-green hover:bg-opacity-90 border border-transparent rounded-full transition duration-200">
+                <a href="#contact" className="inline-flex justify-center items-center w-full py-3 px-6 text-base font-medium text-white bg-circular-green hover:bg-opacity-90 border border-transparent rounded-full transition duration-200 mt-auto">
                   Neem contact op
                 </a>
               </div>
 
               {/* Verzenddoos Column */}
-              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 flex flex-col">
                 <div className="bg-circular-green rounded-2xl px-6 py-3 mb-5">
                   <h3 className="text-xl sm:text-2xl font-medium text-white">Onze verzenddoos</h3>
                 </div>
@@ -176,7 +176,7 @@ export default function Business() {
                 </div>
 
                 {/* Pricing */}
-                <div className="mb-6 space-y-2.5">
+                <div className="mb-6 space-y-2.5 flex-1">
                   <div className="flex items-center justify-between py-2.5 border-b border-gray-200">
                     <div className="text-sm text-gray-700">
                       <span className="font-medium">M</span> (20 x 10 x 10 cm)
@@ -197,7 +197,7 @@ export default function Business() {
                   </div>
                 </div>
 
-                <a href="#contact" className="inline-flex justify-center items-center w-full py-3 px-6 text-base font-medium text-white bg-circular-green hover:bg-opacity-90 border border-transparent rounded-full transition duration-200">
+                <a href="#contact" className="inline-flex justify-center items-center w-full py-3 px-6 text-base font-medium text-white bg-circular-green hover:bg-opacity-90 border border-transparent rounded-full transition duration-200 mt-auto">
                   Neem contact op
                 </a>
               </div>
