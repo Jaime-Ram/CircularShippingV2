@@ -135,12 +135,12 @@ export default function About() {
           <div className="mt-12 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
             {teamMembers.map(member => (
               <div key={member.name} className="group bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 flex flex-col">
-                <div className="h-80 sm:h-96 overflow-hidden relative bg-gray-100 flex items-center justify-center">
+                <div className="h-80 sm:h-96 overflow-hidden relative bg-gray-100">
                   <img
                     src={member.image}
                     alt={`${member.name} - ${member.role}`}
-                    className="object-cover object-[center_top] transition duration-300 group-hover:scale-105 h-full w-full"
-                    style={{ objectPosition: 'center top', height: '117.65%' }}
+                    className="object-cover object-[center_top] transition duration-300 group-hover:scale-105 w-full h-[117.65%]"
+                    style={{ objectPosition: 'center top' }}
                   />
                 </div>
                 <div className="p-4 sm:p-5 space-y-2 sm:space-y-3 flex-1">
