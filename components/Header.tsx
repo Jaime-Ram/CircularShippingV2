@@ -57,7 +57,7 @@ export default function Header() {
   }, [mobileMenuOpen])
 
   const shouldShowGreenBackground = isBusinessPage || isDemoPage || isLoginPage || isScrolled || mobileMenuOpen
-  const businessMenuLabel = audience === 'business' ? 'Zakelijk' : 'Consument'
+  const businessMenuLabel = audience === 'business' ? 'Zakelijk' : 'Inleveren'
   const logoHref = audience === 'business' ? '/business' : '/'
 
   const handleAudienceChange = (value: Audience) => {
@@ -156,7 +156,7 @@ export default function Header() {
                     }`}
                     onClick={() => handleAudienceChange('consumer')}
                   >
-                    Consument
+                    Inleveren
                   </a>
                   <a
                     href="/business"
@@ -285,7 +285,7 @@ export default function Header() {
                       setMobileMenuOpen(false)
                     }}
                   >
-                    Consument
+                    Inleveren
                   </a>
                   <a
                     href="/business"
