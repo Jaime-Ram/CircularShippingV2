@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import dynamic from 'next/dynamic'
 import 'leaflet/dist/leaflet.css'
 import type * as Leaflet from 'leaflet'
+import ScrollReveal from '@/components/ScrollReveal'
 
 let LeafletModule: typeof Leaflet | null = null
 if (typeof window !== 'undefined') {
@@ -449,9 +450,11 @@ export default function DemoPage() {
                 <path d="M16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23C19.866 23 23 19.866 23 16C23 12.134 19.866 9 16 9Z" fill="white" />
               </svg>
             </div>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-medium text-circular-dark tracking-tight">
-              Vind je afleverpunt
-            </h1>
+            <ScrollReveal>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-medium text-circular-dark tracking-tight">
+                Vind je afleverpunt
+              </h1>
+            </ScrollReveal>
             <p className="mt-2 text-gray-600">
               Zoek en vind het dichtstbijzijnde pakketpunt in jouw buurt
             </p>

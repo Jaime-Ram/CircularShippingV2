@@ -1,17 +1,27 @@
+'use client'
+
+import ScrollReveal from '@/components/ScrollReveal'
+
 export default function LoginPage() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-36 md:pt-40 pb-16">
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <span className="inline-flex items-center px-4 py-2 rounded-full bg-circular-green/10 text-circular-green text-sm font-medium">
-            Welkom terug
-          </span>
-          <h1 className="mt-6 text-5xl sm:text-6xl md:text-7xl font-medium text-circular-dark tracking-tight">
-            Inloggen
-          </h1>
-          <p className="mt-4 text-gray-600">
-            Log in om je retouren te volgen, verpakkingen te beheren en toegang te krijgen tot je circulaire dashboards.
-          </p>
+          <ScrollReveal>
+            <span className="inline-flex items-center px-4 py-2 rounded-full bg-circular-green/10 text-circular-green text-sm font-medium">
+              Welkom terug
+            </span>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h1 className="mt-6 text-5xl sm:text-6xl md:text-7xl font-medium text-circular-dark tracking-tight">
+              Inloggen
+            </h1>
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <p className="mt-4 text-gray-600">
+              Log in om je retouren te volgen, verpakkingen te beheren en toegang te krijgen tot je circulaire dashboards.
+            </p>
+          </ScrollReveal>
         </div>
 
         <div className="max-w-xl mx-auto bg-white border border-gray-200 rounded-3xl shadow-sm p-6 sm:p-10">

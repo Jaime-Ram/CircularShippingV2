@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
+import ScrollReveal from '@/components/ScrollReveal'
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<string | null>(null)
@@ -67,8 +68,12 @@ export default function Home() {
       <div className="relative z-10 max-w-[85rem] px-4 py-12 sm:py-16 md:py-16 sm:px-6 lg:px-8 mx-auto">
         {/* Title */}
         <div className="max-w-2xl mx-auto text-center mb-8 sm:mb-10 lg:mb-14">
-          <h2 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-medium leading-tight md:leading-tight text-circular-dark tracking-tight">Samen voor minder uitstoot<span className="text-circular-green">.</span></h2>
-          <p className="mt-2 sm:mt-1 text-sm sm:text-base text-gray-600">Ontdek hoe je samen met ons bijdraagt aan een duurzamere toekomst.</p>
+          <ScrollReveal>
+            <h2 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-medium leading-tight md:leading-tight text-circular-dark tracking-tight">Samen voor minder uitstoot<span className="text-circular-green">.</span></h2>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <p className="mt-2 sm:mt-1 text-sm sm:text-base text-gray-600">Ontdek hoe je samen met ons bijdraagt aan een duurzamere toekomst.</p>
+          </ScrollReveal>
         </div>
         {/* End Title */}
 
@@ -198,11 +203,15 @@ export default function Home() {
           {/* Content - Centered */}
           <div className="relative max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="text-center max-w-4xl mx-auto">
-              <p className="hidden sm:block text-base text-white/80 mb-4">Onze missie</p>
-              <h3 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-medium text-white leading-tight md:leading-tight tracking-tight">
-                <span className="sm:hidden">Meer weten over onze missie?</span>
-                <span className="hidden sm:inline">Wil je meer weten over<br className="hidden sm:block" />onze duurzame missie?</span>
-              </h3>
+              <ScrollReveal>
+                <p className="hidden sm:block text-base text-white/80 mb-4">Onze missie</p>
+              </ScrollReveal>
+              <ScrollReveal delay={100}>
+                <h3 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-medium text-white leading-tight md:leading-tight tracking-tight">
+                  <span className="sm:hidden">Meer weten over onze missie?</span>
+                  <span className="hidden sm:inline">Wil je meer weten over<br className="hidden sm:block" />onze duurzame missie?</span>
+                </h3>
+              </ScrollReveal>
               
               <div className="mt-6 sm:mt-10">
                 <a className="inline-flex py-2.5 px-4 items-center justify-center text-sm font-medium text-circular-green bg-white hover:bg-white/90 border border-transparent rounded-full transition duration-200" href="/about">
@@ -220,9 +229,11 @@ export default function Home() {
       <div id="contact" className="max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 mx-auto scroll-mt-16 md:scroll-mt-20">
         <div className="max-w-2xl lg:max-w-5xl mx-auto">
           <div className="text-center">
-            <h1 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-medium text-circular-dark tracking-tight leading-tight md:leading-tight">
-              Neem <span className="text-circular-green">contact</span> op!
-            </h1>
+            <ScrollReveal>
+              <h1 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-medium text-circular-dark tracking-tight leading-tight md:leading-tight">
+                Neem <span className="text-circular-green">contact</span> op!
+              </h1>
+            </ScrollReveal>
           </div>
 
           <div className="mt-12 grid items-start lg:grid-cols-2 gap-6 lg:gap-16">
@@ -335,8 +346,12 @@ export default function Home() {
                 <div className="relative grid md:grid-cols-5 gap-10">
                   <div className="md:col-span-2">
                     <div className="max-w-xs">
-                      <h2 className="text-5xl font-medium md:text-5xl lg:text-6xl md:leading-tight text-white tracking-tight">Veelgestelde<br /><span className="text-circular-teal">vragen</span></h2>
-                      <p className="mt-1 hidden md:block text-white/80">Antwoorden op de meest gestelde vragen over onze circulaire verzendoplossingen.</p>
+                      <ScrollReveal>
+                        <h2 className="text-5xl font-medium md:text-5xl lg:text-6xl md:leading-tight text-white tracking-tight">Veelgestelde<br /><span className="text-circular-teal">vragen</span></h2>
+                      </ScrollReveal>
+                      <ScrollReveal delay={100}>
+                        <p className="mt-1 hidden md:block text-white/80">Antwoorden op de meest gestelde vragen over onze circulaire verzendoplossingen.</p>
+                      </ScrollReveal>
                     </div>
                   </div>
                   {/* End Col */}

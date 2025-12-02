@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
+import ScrollReveal from '@/components/ScrollReveal'
 
 export default function Business() {
   const [openFaq, setOpenFaq] = useState<string | null>(null)
@@ -26,10 +27,14 @@ export default function Business() {
       {/* Hero Section */}
       <div className="relative z-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="max-w-3xl mb-10 sm:mb-16">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-medium tracking-tight text-circular-dark">Waarom overstappen naar herbruikbare verpakkingen?</h1>
-          <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-700">
-            Duurzame verpakkingsoplossingen voor uw bedrijf. Ontdek hoe herbruikbare verpakkingen uw logistieke processen kunnen verbeteren en bijdragen aan een circulaire economie.
-          </p>
+          <ScrollReveal>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-medium tracking-tight text-circular-dark">Waarom overstappen naar herbruikbare verpakkingen?</h1>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-700">
+              Duurzame verpakkingsoplossingen voor uw bedrijf. Ontdek hoe herbruikbare verpakkingen uw logistieke processen kunnen verbeteren en bijdragen aan een circulaire economie.
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* Stats Grid */}
@@ -83,12 +88,16 @@ export default function Business() {
         <div className="max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-24 mx-auto">
           <div className="relative z-10">
             <div className="max-w-2xl mx-auto text-center mb-12 lg:mb-16">
-              <h2 className="text-5xl sm:text-6xl md:text-7xl font-medium text-white tracking-tight mb-4">
-                Verpakkingen & tarieven
-              </h2>
-              <p className="text-lg text-white/80">
-                Kies het formaat dat past bij jouw verzendbehoeften
-              </p>
+              <ScrollReveal>
+                <h2 className="text-5xl sm:text-6xl md:text-7xl font-medium text-white tracking-tight mb-4">
+                  Verpakkingen & tarieven
+                </h2>
+              </ScrollReveal>
+              <ScrollReveal delay={100}>
+                <p className="text-lg text-white/80">
+                  Kies het formaat dat past bij jouw verzendbehoeften
+                </p>
+              </ScrollReveal>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
@@ -216,8 +225,12 @@ export default function Business() {
       <div className="bg-gray-50">
         <div className="max-w-[85rem] px-4 py-12 sm:py-16 md:py-24 mx-auto">
           <div className="max-w-xs sm:max-w-md md:max-w-none mx-auto text-center mb-12 sm:mb-16 md:mb-20">
-            <h2 className="text-5xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-4 sm:mb-6 text-circular-dark">Wat onze klanten zeggen</h2>
-            <p className="text-sm sm:text-base text-gray-700">Duizenden tevreden klanten die hun verzendproces hebben veranderd</p>
+            <ScrollReveal>
+              <h2 className="text-5xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-4 sm:mb-6 text-circular-dark">Wat onze klanten zeggen</h2>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <p className="text-sm sm:text-base text-gray-700">Duizenden tevreden klanten die hun verzendproces hebben veranderd</p>
+            </ScrollReveal>
           </div>
 
           <div className="max-w-md md:max-w-2xl lg:max-w-6xl mx-auto">
@@ -319,9 +332,11 @@ export default function Business() {
       <div id="contact" className="max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 mx-auto scroll-mt-16 md:scroll-mt-20">
         <div className="max-w-2xl lg:max-w-5xl mx-auto">
           <div className="text-center">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-medium text-circular-dark tracking-tight">
-              Neem <span className="text-circular-green">contact</span> op!
-            </h1>
+            <ScrollReveal>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-medium text-circular-dark tracking-tight">
+                Neem <span className="text-circular-green">contact</span> op!
+              </h1>
+            </ScrollReveal>
           </div>
 
           <div className="mt-12 grid items-start lg:grid-cols-2 gap-6 lg:gap-16">
@@ -429,10 +444,14 @@ export default function Business() {
           <div className="relative grid md:grid-cols-5 gap-10">
             <div className="md:col-span-2">
               <div className="max-w-xs">
-                <h2 className="text-5xl font-medium text-white sm:text-5xl md:text-5xl md:leading-tight tracking-tight">Veelgestelde vragen zakelijk</h2>
-                <p className="mt-2 text-white/80">
-                  Antwoorden op de meest gestelde vragen van onze zakelijke partners.
-                </p>
+                <ScrollReveal>
+                  <h2 className="text-5xl font-medium text-white sm:text-5xl md:text-5xl md:leading-tight tracking-tight">Veelgestelde vragen zakelijk</h2>
+                </ScrollReveal>
+                <ScrollReveal delay={100}>
+                  <p className="mt-2 text-white/80">
+                    Antwoorden op de meest gestelde vragen van onze zakelijke partners.
+                  </p>
+                </ScrollReveal>
               </div>
             </div>
 

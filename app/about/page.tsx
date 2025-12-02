@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import ScrollReveal from '@/components/ScrollReveal'
 
 export default function About() {
   const teamMembers = [
@@ -42,9 +43,11 @@ export default function About() {
         
         <div className="relative z-10 h-full max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
           <div className="text-center max-w-5xl mx-auto">
-            <h1 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-medium text-white tracking-tight">
-              Een wereld zonder single-use verpakkingen
-            </h1>
+            <ScrollReveal>
+              <h1 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-medium text-white tracking-tight">
+                Een wereld zonder single-use verpakkingen
+              </h1>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -54,9 +57,11 @@ export default function About() {
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Title */}
           <div className="mb-12">
-            <h2 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-medium text-circular-dark tracking-tight">
-              Van frustratie<br className="hidden sm:block" />naar <span className="text-circular-green">een circulaire oplossing</span>
-            </h2>
+            <ScrollReveal>
+              <h2 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-medium text-circular-dark tracking-tight">
+                Van frustratie<br className="hidden sm:block" />naar <span className="text-circular-green">een circulaire oplossing</span>
+              </h2>
+            </ScrollReveal>
           </div>
 
           {/* Two Blocks */}
@@ -117,9 +122,11 @@ export default function About() {
       <section className="py-12 lg:py-24">
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-medium text-circular-dark tracking-tight mb-4">
-              Ontmoet onze founders
-            </h2>
+            <ScrollReveal>
+              <h2 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-medium text-circular-dark tracking-tight mb-4">
+                Ontmoet onze founders
+              </h2>
+            </ScrollReveal>
             <p className="text-gray-700">
               Bart, Joris en Joost vormen het kernteam achter Circular Shipping en leiden dagelijks onze circulaire ambities.
             </p>
