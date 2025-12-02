@@ -136,13 +136,10 @@ export default function About() {
             {teamMembers.map(member => (
               <div key={member.name} className="group bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 flex flex-col">
                 <div className="h-80 sm:h-96 overflow-hidden relative bg-gray-100 flex items-center justify-center">
-                  <Image
+                  <img
                     src={member.image}
                     alt={`${member.name} - ${member.role}`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-contain transition duration-300 group-hover:scale-105"
-                    unoptimized
+                    className="object-contain transition duration-300 group-hover:scale-105 h-full w-full"
                   />
                 </div>
                 <div className="p-4 sm:p-5 space-y-2 sm:space-y-3 flex-1">
