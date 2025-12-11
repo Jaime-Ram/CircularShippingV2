@@ -19,7 +19,7 @@ export default function Footer() {
               <a href="/" className="hover:text-circular-dark-green transition-colors">Home</a>
               <a href="/about" className="hover:text-circular-dark-green transition-colors">Over ons</a>
               <a href="/business" className="hover:text-circular-dark-green transition-colors">Zakelijk</a>
-              <a href="/demo" className="hover:text-circular-dark-green transition-colors">Inleverpunten</a>
+              <a href="https://boxo.nu/inleverpunten/?locate=" target="_blank" rel="noopener noreferrer" className="hover:text-circular-dark-green transition-colors">Inleverpunten</a>
               <a href="/#contact" className="hover:text-circular-dark-green transition-colors">Contact</a>
               <a href="/#faq" className="hover:text-circular-dark-green transition-colors">FAQ</a>
             </div>

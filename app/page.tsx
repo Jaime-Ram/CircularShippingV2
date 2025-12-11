@@ -54,7 +54,7 @@ export default function Home() {
                       Onze missie
                       <svg className="shrink-0 size-4 ml-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                     </a>
-                    <a className="inline-flex items-center justify-center py-3 px-5 text-base font-medium text-white/90 border border-white/40 rounded-full transition duration-200 hover:bg-white/10" href="/demo">
+                    <a className="inline-flex items-center justify-center py-3 px-5 text-base font-medium text-white/90 border border-white/40 rounded-full transition duration-200 hover:bg-white/10" href="https://boxo.nu/inleverpunten/?locate=" target="_blank" rel="noopener noreferrer">
                       Inleverpunten in mijn buurt
                       <svg className="shrink-0 size-4 ml-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                     </a>
@@ -120,10 +120,10 @@ export default function Home() {
               <div className="relative z-10 flex flex-col justify-between h-full px-6 pt-6 pb-4 sm:px-8 sm:pt-8 sm:pb-3 md:px-10 md:pt-10 md:pb-6">
                 <div>
                   <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-white">Ik heb een pakket ontvangen</h3>
-                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-white/90">Top dat je koos voor de duurzame optie! Vind via <a href="https://boxo.nu/inleverpunten/" target="_blank" rel="noopener noreferrer" className="underline decoration-gray-400">BOXO</a> een inleverpunt bij jou in de buurt. Volg de instructies op het retourlabel en bedankt dat je meedoet!</p>
+                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-white/90">Top dat je koos voor de duurzame optie! Vind via <a href="https://boxo.nu/inleverpunten/?locate=" target="_blank" rel="noopener noreferrer" className="underline decoration-gray-400">BOXO</a> een inleverpunt bij jou in de buurt. Volg de instructies op het retourlabel en bedankt dat je meedoet!</p>
                 </div>
                 <a
-                  href="https://boxo.nu/inleverpunten/"
+                  href="https://boxo.nu/inleverpunten/?locate="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 sm:mt-6 inline-flex items-center justify-center h-10 px-4 text-sm font-medium text-white bg-circular-green hover:bg-opacity-90 border border-transparent rounded-full transition duration-200 max-lg:mx-auto"
@@ -386,7 +386,7 @@ export default function Home() {
                         <p className="text-white/80 pt-2">
                           Bekijk{' '}
                           <a
-                            href="https://boxo.nu/inleverpunten/"
+                            href="https://boxo.nu/inleverpunten/?locate="
                             target="_blank"
                             rel="noopener noreferrer"
                             className="underline decoration-white/60 underline-offset-4 hover:text-circular-teal transition-colors"
