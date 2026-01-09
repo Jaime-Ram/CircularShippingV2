@@ -59,7 +59,7 @@ export default function About() {
           <div className="mb-12">
             <ScrollReveal>
               <h2 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-medium text-circular-dark tracking-tight">
-                Van frustratie<br className="hidden sm:block" />naar <span className="text-circular-green">een circulaire oplossing</span>
+                Van frustratie<br className="hidden sm:block" /> naar <span className="text-circular-green">een circulaire oplossing</span>
               </h2>
             </ScrollReveal>
           </div>
@@ -128,7 +128,7 @@ export default function About() {
               </h2>
             </ScrollReveal>
             <p className="text-gray-700">
-              Bart, Joris en Joost vormen het kernteam achter Circular Shipping en leiden dagelijks onze circulaire ambities.
+              Bart, Boris en Joost vormen het kernteam achter Circular Shipping en leiden dagelijks onze circulaire ambities.
             </p>
           </div>
 
