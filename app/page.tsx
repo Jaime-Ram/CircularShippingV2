@@ -19,15 +19,15 @@ export default function Home() {
                 {/* Hero Image */}
                 <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
                   <Image 
-                    src="/images/Hero.png" 
-                    alt="Hero" 
+src="/images/HeroAnieuw.png"
+                    alt="Hero"
                     fill
                     priority
                     sizes="100vw"
-                    className="object-cover object-[center_40%] sm:object-center scale-x-[-1] opacity-100"
+                    className="object-cover object-[center_40%] sm:object-center opacity-100"
                   />
                   {/* Dark overlay */}
-                  <div className="absolute inset-0 bg-black/30"></div>
+                  <div className="absolute inset-0 bg-black/15"></div>
                 </div>
 
                 {/* Title */}
@@ -109,14 +109,37 @@ export default function Home() {
 
         {/* Bento Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 sm:gap-6 mt-8 sm:mt-10 lg:mt-16 lg:grid-rows-2 justify-center max-w-5xl mx-auto">
-          {/* Card 1 - Large left */}
+          {/* Card 1 - Large left: op mobiel + middelgroot tekst links + plaatje rechts met gradient; op groot scherm volle achtergrond */}
           <div className="group relative lg:row-span-2 lg:col-span-2 min-h-[280px] sm:min-h-[320px] lg:min-h-0">
             <div className="absolute inset-px rounded-2xl sm:rounded-3xl bg-white border border-gray-200"></div>
-            <div className="relative flex h-full flex-col overflow-hidden rounded-2xl sm:rounded-3xl">
-              <div className="absolute inset-0">
-                <div className="h-full w-full bg-[url('/images/Terugsturen.jpg')] bg-cover bg-[position:80%_center] origin-center -scale-x-100 transform"></div>
+            {/* Mobiel + middelgroot: tekst links, plaatje rechts met vloeiende overgang */}
+            <div className="relative flex lg:hidden h-full flex-row overflow-hidden rounded-2xl sm:rounded-3xl">
+              <div className="relative z-10 flex flex-1 flex-col justify-between bg-circular-dark-green px-6 pt-6 pb-4 sm:px-8 sm:pt-8 sm:pb-3 min-w-0">
+                <div>
+                  <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-white">Ik heb een pakket ontvangen</h3>
+                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-white/90">Top dat je koos voor de duurzame optie! Vind via <a href="https://boxo.nu/inleverpunten/?locate=" target="_blank" rel="noopener noreferrer" className="underline decoration-gray-400">BOXO</a> een inleverpunt bij jou in de buurt. Volg de instructies op het retourlabel en bedankt dat je meedoet!</p>
+                </div>
+                <a
+                  href="https://boxo.nu/inleverpunten/?locate="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 sm:mt-6 inline-flex items-center justify-center h-10 px-4 text-sm font-medium text-white bg-circular-green hover:bg-opacity-90 border border-transparent rounded-full transition duration-200 w-full sm:w-auto"
+                >
+                  Terugsturen
+                  <svg className="shrink-0 size-3 sm:size-4 ml-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </a>
               </div>
-              <div className="absolute inset-0 bg-black/50"></div>
+              <div className="relative flex-[1.2] min-h-[200px] sm:min-h-0 flex-shrink-0">
+                <div className="absolute inset-0 bg-[url('/images/Pakketontvangen.jpeg')] bg-[length:128%] bg-[position:42%_78%] sm:bg-[position:42%_62%] bg-no-repeat" aria-hidden />
+                <div className="absolute inset-0 bg-gradient-to-r from-circular-dark-green via-circular-dark-green/30 to-transparent w-3/5 pointer-events-none" aria-hidden />
+              </div>
+            </div>
+            {/* Alleen groot scherm (lg+): volle achtergrond met overlay en tekst erop */}
+            <div className="hidden lg:flex absolute inset-0 flex-col overflow-hidden rounded-2xl sm:rounded-3xl">
+              <div className="absolute inset-0">
+                <div className="h-full w-full bg-[url('/images/Pakketontvangen.jpeg')] bg-cover bg-[position:50%_40%] lg:bg-center"></div>
+              </div>
+              <div className="absolute inset-0 bg-black/25"></div>
               <div className="relative z-10 flex flex-col justify-between h-full px-6 pt-6 pb-4 sm:px-8 sm:pt-8 sm:pb-3 md:px-10 md:pt-10 md:pb-6">
                 <div>
                   <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-white">Ik heb een pakket ontvangen</h3>
