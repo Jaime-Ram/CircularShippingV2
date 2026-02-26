@@ -15,11 +15,11 @@ export default function Home() {
     <div className="min-h-screen">
             {/* Hero Section */}
             <div className="bg-white relative overflow-hidden z-0">
-              <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-40 sm:pt-52 pb-20 lg:pb-32 space-y-8 sm:space-y-10 min-h-[620px] sm:min-h-[720px]">
+              <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-52 pb-20 lg:pb-32 min-h-[620px] sm:min-h-[720px] flex flex-col">
                 {/* Hero Image */}
                 <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
-                  <Image 
-src="/images/HeroAnieuw.png"
+                  <Image
+                    src="/images/HeroAnieuw.png"
                     alt="Hero"
                     fill
                     priority
@@ -30,25 +30,29 @@ src="/images/HeroAnieuw.png"
                   <div className="absolute inset-0 bg-black/15"></div>
                 </div>
 
-                {/* Title */}
-                <div className="max-w-3xl text-left sm:text-left relative z-10">
-                  <h1 className="block font-medium text-white text-5xl sm:text-5xl md:text-5xl lg:text-6xl tracking-tight leading-tight md:leading-tight break-words max-w-[15ch] sm:max-w-none">
-                    <span className="sm:hidden">
-                      De duurzaamste<br />verzend-oplossing<span className="text-circular-teal">.</span>
-                    </span>
-                    <span className="hidden sm:inline">
-                      De duurzaamste<br />verzendoplossing<span className="text-circular-teal">.</span>
-                    </span>
-                  </h1>
-                </div>
-                {/* End Title */}
+                {/* Titel + ondertitel bovenaan, knoppen onderaan (mobiel én desktop) */}
+                <div className="relative z-10 flex flex-1 flex-col justify-between min-h-0">
+                  <div className="space-y-4 sm:space-y-6">
+                    {/* Title */}
+                    <div className="max-w-3xl text-left">
+                      <h1 className="block font-medium text-white text-5xl sm:text-5xl md:text-5xl lg:text-6xl tracking-tight leading-tight md:leading-tight break-words max-w-[15ch] sm:max-w-none">
+                        <span className="sm:hidden">
+                          De duurzaamste<br />verzend-oplossing<span className="text-circular-teal">.</span>
+                        </span>
+                        <span className="hidden sm:inline">
+                          De duurzaamste<br />verzendoplossing<span className="text-circular-teal">.</span>
+                        </span>
+                      </h1>
+                    </div>
+                    {/* End Title */}
 
-                <div className="max-w-3xl text-left relative z-10">
-                  <p className="text-base sm:text-lg text-white/90">Herbruikbare verpakkingen die 80% CO₂ besparen en volledig circulair zijn.<br />De toekomst van duurzaam verzenden, nu beschikbaar.</p>
-                </div>
+                    <div className="max-w-3xl text-left">
+                      <p className="text-base sm:text-lg text-white/90 [text-wrap:balance]">Herbruikbare verpakkingen die 80% CO₂ besparen en volledig circulair zijn.<br />De toekomst van duurzaam verzenden, nu{"\u00A0"}beschikbaar.</p>
+                    </div>
+                  </div>
 
-                {/* Buttons */}
-                <div className="text-left relative z-10">
+                  {/* Buttons onderaan */}
+                  <div className="text-left mt-auto pt-6 sm:pt-8">
                   <div className="flex flex-row flex-wrap items-center gap-3 sm:gap-4">
                     <a className="inline-flex items-center justify-center py-3 px-5 text-base font-medium text-white bg-circular-green hover:bg-opacity-90 border border-transparent rounded-full transition duration-200" href="/about">
                       Onze missie
@@ -58,6 +62,7 @@ src="/images/HeroAnieuw.png"
                       Inleverpunten in mijn buurt
                       <svg className="shrink-0 size-4 ml-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                     </a>
+                  </div>
                   </div>
                 </div>
                 {/* End Buttons */}
